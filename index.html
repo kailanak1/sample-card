@@ -2,16 +2,21 @@
 <html>
     <head>
         <title>Sample Card</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
 
     <body>
-        <div>
-            <h5>
+        <div class="panel">
+            <div class="panel-heading"></div>
+            <h5 class="panel-body">
                 <strong>email:</strong>{{contact.email}}
             </h5>
-            <h5>
+            <div class="panel-success"></div>
+            <h5 class="panel-body">
                 <strong>country:</strong>{{contact.country}}
             </h5>
         </div>
+        <div id="img"></div>
     </body>
 </html>
