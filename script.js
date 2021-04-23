@@ -10,3 +10,43 @@ response
             img.width = 200
             document.getElementById('img').appendChild(img); 
     })
+
+
+  let links = app.post("/link-initialize", (req, res, next) => {
+    console.log('body==initialize=', req.body);
+    res.send({
+        "canvas": {
+            "content": {
+                "components": [
+                    {
+                        "type": "link",
+                        "visibleText": "Click Click Click",
+                        "url": "https://google.com"
+                    },
+                    {
+                        "type": "link",
+                        "visibleText": "Click Click Click",
+                        "url": "https://google.com",
+                        "showLink": false
+                    },
+                    {
+                        "type": "link",
+                        "visibleText": "Click Click Click",
+                        "url": "https://google.com",
+                        "showLink": true
+                    },
+                    {
+                        "type": "link",
+                        "url": "https://google.com",
+                        "showLink": false
+                    },
+                    {
+                        "type": "link",
+                        "url": "https://google.com",
+                        "showLink": true
+                    }
+                ]
+            }
+        }
+    });
+});
